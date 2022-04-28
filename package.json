@@ -27,18 +27,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nestjs/schematics.git"
+    "url": "https://github.com/maxgaurav/nestjs-template-schematics"
   },
-  "contributors": [
-    "ThomRick",
-    "Kamil Mysliwiec",
-    "John Biundo"
-  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nestjs/schematics/issues"
+    "url": "https://github.com/maxgaurav/nestjs-framework-template/issues"
   },
-  "homepage": "https://github.com/nestjs/schematics#readme",
+  "homepage": "https://github.com/maxgaurav/nestjs-framework-template",
   "dependencies": {
     "@angular-devkit/core": "13.3.2",
     "@angular-devkit/schematics": "13.3.2",
