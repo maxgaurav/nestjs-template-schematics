@@ -1,16 +1,17 @@
 {
   "name": "@maxgaurav/nestjs-template-schematics",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Schematic to setup https://github.com/maxgaurav/nestjs-framework-template through collection flag in nest cli new action",
   "main": "dist/index.js",
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "!dist/**/.git"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "postbuild": "npm run copy:collection && npm run copy:lib",
+    "postbuild": "npm run copy:collection && npm run copy:lib && rm -rf dist/lib/application/files/ts/.git",
     "build": "rm -rf dist && tsc --project tsconfig.lib.json",
     "clean": "gulp clean:src",
     "copy:collection": "cpx src/collection.json dist && cpx 'src/lib/**/schema.json' dist/lib",
