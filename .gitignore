@@ -16,3 +16,5 @@ src/utils/**/*.js
 src/utils/**/*.d.ts
 
 .DS_Store
+
+src/lib/application/files/ts

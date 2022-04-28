@@ -37,10 +37,6 @@
       "description": "Nest application version.",
       "default": "0.0.1"
     },
-    "language": {
-      "type": "string",
-      "description": "Nest application language."
-    },
     "packageManager": {
       "type": "string",
       "description": "Nest application package manager."

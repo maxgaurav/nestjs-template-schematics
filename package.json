@@ -1,7 +1,7 @@
 {
-  "name": "@nestjs/schematics",
-  "version": "8.0.10",
-  "description": "Nest - modern, fast, powerful node.js web framework (@schematics)",
+  "name": "@maxgaurav/nestjs-template-schematics",
+  "version": "1.0.0-alpha.1",
+  "description": "Schematic to setup https://github.com/maxgaurav/nestjs-framework-template through collection flag in nest cli new action",
   "main": "dist/index.js",
   "files": [
     "dist/**/*"

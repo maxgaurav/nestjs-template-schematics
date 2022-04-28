@@ -1,0 +1,3 @@
+[submodule "src/lib/application/files/ts"]
+	path = src/lib/application/files/ts
+	url = https://github.com/maxgaurav/nestjs-framework-template
