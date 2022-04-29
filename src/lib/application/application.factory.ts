@@ -17,6 +17,8 @@ import {
   DEFAULT_VERSION,
 } from '../defaults';
 import { ApplicationOptions } from './application.schema';
+import { Tree } from '@angular-devkit/schematics/src/tree/interface';
+import { Observable } from 'rxjs';
 
 export function main(options: ApplicationOptions): Rule {
   options.name = normalizeToKebabOrSnakeCase(options.name);
@@ -74,8 +76,17 @@ function resolvePackageName(path: string) {
   return baseFilename;
 }
 
+const renameGitIgnores: Rule = (rootTree: Tree) : Tree | Observable<Tree> | Rule | Promise<void | Rule> | void => {
+  rootTree.visit((visitor) => {
+    if (visitor.includes('.template')) {
+      rootTree.rename(visitor, visitor.replace('.template', ''));
+    }
+  });
+}
+
 function generate(options: ApplicationOptions, path: string): Source {
   return apply(url(join('./files' as Path, options.language)), [
+    renameGitIgnores,
     template({
       ...strings,
       ...options,
